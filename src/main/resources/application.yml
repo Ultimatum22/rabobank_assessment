@@ -1,0 +1,19 @@
+server:
+  port: 7777
+
+spring:
+  datasource:
+    username: username
+    password: myverysecurepassword
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:rabobank;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+  batch:
+    job:
+      enabled: false # Prevents job running on startup, only scheduled
